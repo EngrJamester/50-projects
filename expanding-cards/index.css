@@ -1,0 +1,70 @@
+.body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin:10px;
+    position: relative;
+    transition: all 700ms ease-in;
+    -webkit-transition: all 700ms ease-in;    
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
+
+
+.container .panel:first-child {
+    background-image: url('https://thumbs.dreamstime.com/b/pontoon-sea-handrails-sunset-61074451.jpg') ;
+}
+
+.container .panel:nth-child(2){
+    background-image: url('https://media.istockphoto.com/id/637280958/photo/image-of-red-deer-stag-in-foggy-autumn-colorful-forest.jpg?s=612x612&w=0&k=20&c=fiVR2c7VD7kebbiZwlYNFbJ935WK1LnbgGA4NEF_Qvc=');
+}
+
+.container .panel:nth-child(3) {
+    background-image: url('https://thumbs.dreamstime.com/b/view-sunny-day-tropical-beach-palm-trees-fence-view-sunny-day-tropical-beach-palm-trees-fence-154010994.jpg');
+}
